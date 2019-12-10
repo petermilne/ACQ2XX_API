@@ -1,0 +1,2 @@
+#!/bin/bash
+LD_LIBRARY_PATH=./x86/lib ./x86/bin/acq2sh $*

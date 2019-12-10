@@ -1,0 +1,11 @@
+#!/bin/bash
+# create acq_demux aliases
+cd $1
+
+ln_p() {
+	[ -L $2 ] || ln -s $1 $2
+}
+ln_p acq_demux acq_demux-lm
+ln_p acq_demux acq_demux-ll
+ln_p acq_demux acq_demux-lpp
+ln_p acq_demux make.acq200.format

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for shot in $*
+do
+	./x86/bin/acq_demux --cleanup 1 -d 0 -a acq132-lfp.def  \
+		-T 100 --dual-rate 64,4 $shot
+done
+
+mkdir COMBO.XX
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+hd() {
+#	hexdump -e '"%10_ad: " 4/4 "%08x " "\n"' $1
+	hexdump -e '"%10_ad: "2/4 "%08x "   "..." 4/4 "%08x " "\n"' $1
+}
+
+for X in A B C D
+do
+	hd /tmp/ES-dump$X > /tmp/ES-dump$X.txt
+done
